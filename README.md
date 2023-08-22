@@ -12,6 +12,7 @@ get productive as quickly as possible.
 1. VS Code
 1. VS Code Extension: Python
 1. Git (configured)
+### All of these work and have been installed
 
 Remember:
 
@@ -48,17 +49,6 @@ python util_about.py
 ---
 
 
-## Explore & Execute Project Scripts
-
-With your repo folder open in VS Code, start exploring.
-Open, read, and run each project script (each file will have a .py extension) in order.
-You don't need to fully understand the code yet. 
-Instead, try to figure out what each file is doing.
-
-When you finish, you'll have an idea of some things possible using just the Python standard library. 
-You'll have generated several new data files.
-The streaming process will run continuously for quite a while. 
-Read the comments in the file to learn how to stop the process.
 
 ## Update Edit README
 
@@ -76,6 +66,7 @@ back up to your cloud repo in GitHub.
 
 
 ### Option A: Use VS Code (Easy!)
+#### This is the one I want to use
 
 1. On the VS Code side panel, click the source control icon (look for a blue bubble with an number in it).
 1. Important! Above the Commit button, it will say "Message". 
