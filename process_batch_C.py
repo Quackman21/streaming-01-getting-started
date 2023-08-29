@@ -2,7 +2,7 @@
 Batch Process C: Third transformation
 
 Read from a file, transform, write to a new file.
-In this case, covert degree K to degree F.
+In this case, convert temperature from Kelvin to Fahrenheit.
 
 Note: 
 This is a batch process, but the file objects we use are 
@@ -27,18 +27,48 @@ logging.basicConfig(
 # Declare program constants
 
 INPUT_FILE_NAME = "batchfile_2_kelvin.csv"
-OUTPUT_FILE_NAME = "batchfile_3_farenheit.csv"
+OUTPUT_FILE_NAME = "batchfile_3_fahrenheit.csv"
 
 # Define program functions (bits of reusable code)
 # Use docstrings - and indentation matters!
 
 
 def convert_k_to_f(temp_k):
-    return
+    """
+    Convert temperature from Kelvin to Fahrenheit.
+    
+    :param temp_k: Temperature in Kelvin
+    :return: Temperature in Fahrenheit
+    """
+    return (temp_k - 273.15) * 9/5 + 32
 
 
 def process_rows(input_file_name, output_file_name):
-    return
+    """
+    Process rows in the input CSV file, convert temperatures from Kelvin to Fahrenheit, and write to the output file.
+    
+    :param input_file_name: Input CSV file name
+    :param output_file_name: Output CSV file name
+    """
+    try:
+        with open(input_file_name, mode='r') as input_file, open(output_file_name, mode='w', newline='') as output_file:
+            reader = csv.reader(input_file)
+            writer = csv.writer(output_file)
+            
+            # Write header row
+            header = next(reader)
+            writer.writerow(header)
+            
+            for row in reader:
+                # Assuming the temperature is in the second column
+                temp_k = float(row[1])
+                temp_f = convert_k_to_f(temp_k)
+                row[1] = temp_f
+                writer.writerow(row)
+
+        logging.info(f"Conversion complete. Results written to {output_file_name}")
+    except Exception as e:
+        logging.error(f"An error occurred: {e}")
 
 
 # ---------------------------------------------------------------------------
@@ -54,3 +84,4 @@ if __name__ == "__main__":
         logging.info("===============================================")
     except Exception as e:
         logging.error(f"An error occurred: {e}")
+

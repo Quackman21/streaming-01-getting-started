@@ -2,7 +2,7 @@
 ======================================================================
 ======================================================================
  Welcome to the NW Python Debugging Information Utility!
- Date and Time: 2023-08-22 at 03:38 PM
+ Date and Time: 2023-08-29 at 02:25 PM
  Operating System: posix Darwin 21.3.0
  System Architecture: 64bit
  Number of CPUs: 8
@@ -12,7 +12,7 @@
  Python Implementation: CPython
  Active pip environment:   None
  Active conda environment: None
- Path to Interpreter:         /Library/Frameworks/Python.framework/Versions/3.10/bin/python3
+ Path to Interpreter:         /usr/local/bin/python3
  Path to virtual environment: /Library/Frameworks/Python.framework/Versions/3.10
  Current Working Directory:   /Users/ivanquackenbush/Documents/44-608/Streaming-Data/streaming-01-getting-started
  Path to source directory:    /Users/ivanquackenbush/Documents/44-608/Streaming-Data/streaming-01-getting-started
